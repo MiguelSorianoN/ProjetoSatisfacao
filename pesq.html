@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Pesquisa de Satisfação</title>
+  </head>
+  <body>
+    <center>
+    <h1>Pesquisa de Satisfação</h1>
+
+    <form action="/responder" method="post">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" required><br>
+
+      <label for="satisfacao">Satisfação:</label>
+      <select id="satisfacao" name="satisfacao" required>
+        <option value="">Selecione uma opção</option>
+        <option value="1">1 - Ruim</option>
+        <option value="2">2 - Ruim</option>
+        <option value="3">3 - Ruim</option>
+        <option value="4">4 - Mediano</option>
+        <option value="5">5 - Mediano</option>
+        <option value="6">6 - Mediano</option>
+        <option value="7">7 - Bom</option>
+        <option value="8">8 - Bom</option>
+        <option value="9">9 - Excelente</option>
+        <option value="10">10 - Excelente</option>
+      </select><br>
+
+      <button type="submit">Enviar</button>
+    </form>
+
+    <h2>Respostas de hoje</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Código</th>
+          <th>Nome</th>
+          <th>Satisfação</th>
+          <th>Categoria</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% respostas.each do |codigo, resposta| %>
+          <% if resposta[:data] == Date.today %>
+            <tr>
+              <td><%= codigo %></td>
+              <td><%= resposta[:nome] %></td>
+              <td><%= resposta[:satisfacao] %></td>
+              <td><%= resposta[:categoria] %></td>
+            </tr>
+          <% end %>
+        <% end %>
+      </tbody>
+    </table>
+    </center>
+  </body>
+</html>

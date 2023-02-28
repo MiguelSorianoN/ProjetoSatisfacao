@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Responder pesquisa de satisfação</title>
+  </head>
+  <body>
+    <h1>Pesquisa de satisfação</h1>
+    <form method="post" action="/enviar_resposta">
+      <label for="nome">Qual é o seu nome?</label>
+      <input type="text" name="nome" id="nome" required>
+      <br>
+      <label for="satisfacao">Em uma escala de 1 a 10, o quão satisfeito você está com nosso produto/serviço?</label>
+      <br>
+      <input type="radio" name="satisfacao" id="1" value="1" required>
+      <label for="1">1 - Ruim</label>
+      <br>
+      <input type="radio" name="satisfacao" id="2" value="2">
+      <label for="2">2 - Ruim</label>
+      <br>
+      <input type="radio" name="satisfacao" id="3" value="3">
+      <label for="3">3 - Ruim</label>
+      <br>
+      <input type="radio" name="satisfacao" id="4" value="4">
+      <label for="4">4 - Mediano</label>
+      <br>
+      <input type="radio" name="satisfacao" id="5" value="5">
+      <label for="5">5 - Mediano</label>
+      <br>
+      <input type="radio" name="satisfacao" id="6" value="6">
+      <label for="6">6 - Mediano</label>
+      <br>
+      <input type="radio" name="satisfacao" id="7" value="7">
+      <label for="7">7 - Bom</label>
+      <br>
+      <input type="radio" name="satisfacao" id="8" value="8">
+      <label for="8">8 - Bom</label>
+      <br>
+      <input type="radio" name="satisfacao" id="9" value="9">
+      <label for="9">9 - Excelente</label>
+      <br>
+      <input type="radio" name="satisfacao" id="10" value="10">
+      <label for="10">10 - Excelente</label>
+      <br>
+      <input type="submit" value="Enviar resposta">
+    </form>
+  </body>
+</html>
