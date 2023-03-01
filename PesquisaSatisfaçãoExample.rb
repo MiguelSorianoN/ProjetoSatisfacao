@@ -1,5 +1,9 @@
 # programação base para NPS em empresas de atendimento ao cliente
 
+chapters = []
+nota_e = []
+nota_m = []
+nota_n = []
 fimdia = true
 
 while (fimdia) do
@@ -17,16 +21,20 @@ when 5..8
     nota_m = gets.chomp
 when 9..10
     puts "Que bom que se sentiu satisfeito com nosso atendimento, a sua alegria nos faz mais felizes."
+    nota_e = gets.chomp
 else
     puts "Que pena, essa não é uma nota válida."
 end
 
 puts "Informe aqui o nome do funcionário que lhe atendeu"
-chapters = []
   input = gets.chomp
   chapters << input
 
-puts "Chapters: " + chapters.join(", ")
+
+  puts "Chapters: " + chapters.join(", ")
+  puts "Notas negativas: " + notas_n.join(", ")
+  puts "Notas medianas: " + notas_m.join(", ")
+  puts "Notas Positivas: " + notas_e.join(", ")
 # puts "Chegamos ao fim do expediente? (S,N)"
 #     fimdia = (gets.upcase.strip != "S")
 sleep 3
@@ -35,6 +43,8 @@ end
 puts ""
 puts ""
 puts ""
+puts "Essas foram todas as notas que recebemos:\n#{nota_n, nota_m, nota_e}"
+puts "Essa foi a média relacionada as notas que recebemos:\n#{(nota_n, nota_m, nota_e)/(nota_n + nota_m + nota_e)}"
 puts "Essas foram as sugestões relacionadas as notas negativas que recebemos:\n#{nota_n}"
 puts "Essas foram as sugestões relacionadas as notas medianas que recebemos:\n#{nota_m}"
 puts "Esses foram os funcionários que receberam as melhores notas de atendimento:\n#{chapters}"
